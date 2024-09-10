@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TransferBatch.App": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\devIt\\Learn\\Filipe-Test\\transfer-batch-processing\\sample.csv"
+    }
+  }
+}
