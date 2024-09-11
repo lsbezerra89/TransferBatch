@@ -2,7 +2,7 @@
 using TransferBatch.Services;
 using TransferBatch.Services.Interfaces;
 
-namespace TransferBatch.App
+namespace TransferBatch.App.IoC
 {
     public class Startup
     {
