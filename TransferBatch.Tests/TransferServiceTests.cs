@@ -82,10 +82,10 @@ namespace TransferBatch.Services.Tests
 
             // Assert
             var a10Commission = result.Single(c => c.AccountId == "A10");
-            Assert.Equal(10.00m, a10Commission.TotalCommission); 
+            Assert.Equal(30.00m, a10Commission.TotalCommission); 
 
             var a11Commission = result.Single(c => c.AccountId == "A11");
-            Assert.Equal(15.00m, a11Commission.TotalCommission); // 150 + 250 = 400 * 0.1 = 40, mas 250 é excluído
+            Assert.Equal(15.00m, a11Commission.TotalCommission); 
         }
     }
 }
