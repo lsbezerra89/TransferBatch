@@ -36,7 +36,7 @@ namespace TransferBatch.Services.Tests
         }
 
         [Fact]
-        public void CalculateCommissions_WithOneTransfer_ReturnsCorrectCommission()
+        public void CalculateCommissions_WithOneTransfer_ReturnsNoCommission()
         {
             // Arrange            
             var transfers = new List<Transfer> { new Transfer() { AccountId = "A10", TransferId = "T1000", Amount = 100.00m } };
@@ -47,7 +47,7 @@ namespace TransferBatch.Services.Tests
             // Assert
             var commission = Assert.Single(result);
             Assert.Equal("A10", commission.AccountId);
-            Assert.Equal(10.00m, commission.TotalCommission);
+            Assert.Equal(0.00m, commission.TotalCommission);
         }
 
         [Fact]

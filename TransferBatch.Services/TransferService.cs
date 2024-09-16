@@ -13,9 +13,8 @@ namespace TransferBatch.Services
             if (transfers == null || transfers.Count == 0) { return []; }
 
             var result = new List<CommissionDTO>();
-            
-            var highestTransferAmount = transfers.Max(t => t.Amount);
 
+            var highestTransferAmount = transfers.Max(t => t.Amount);
             var transfersByAccount = transfers.GroupBy(t => t.AccountId);
 
             bool highestTransferExcluded = false;
@@ -36,11 +35,6 @@ namespace TransferBatch.Services
                         continue;
                     }
                     totalByAccount += transfer.Amount;
-                }
-
-                if (transfersList.Count == 1)
-                {
-                    totalByAccount = transfersList.First().Amount;
                 }
 
                 var totalCommission = totalByAccount * commission;
